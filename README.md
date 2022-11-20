@@ -1,12 +1,12 @@
 # apfs-clone-checker
-An utility to check if two files are clones in macOs APFS.
+An utility to check if two files are clones in macOS APFS.
 
 
 ## How it works (and motivation)
 
 Some years ago (2017-09-26) I asked in [stackoverflow](https://stackoverflow.com/questions/46417747/apple-file-system-apfs-check-if-file-is-a-clone-on-terminal-shell) and in [Apple Developer Forum](https://developer.apple.com/forums/thread/81100) if there is a way to identify if a file is a clone.
 
-3 years later, no response or update of macOs tools to get this.
+3 years later, no response or update of macOS tools to get this.
 
 My motivation, like others who also want an answer ( I guess :smile: ), is create a tool that analyze entire disk and create clones of files with same content. (use clone APFS feature at maximum possible).
 
@@ -46,11 +46,11 @@ If exit code not 0 (NOK) than:
 * -?,h: Print usage.
 
 ## Compilation
-Have gcc installed (XCode).<br>
+Have gcc or clang installed (XCode).<br>
 Copy clone_checker.c (or content) to your computer.<br>
 Run gcc:
 ```.sh
-gcc clone_checker.c -o clone_checker
+cc clone_checker.c -O3 -o clone_checker
 ```
 Optional (mark binary executable):
 ```.sh
